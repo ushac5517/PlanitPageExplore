@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78e25756-a654-4b51-877f-db14b185196f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/strategies/MatchByRadiusGreater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/strategies/Matchable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/tests/PlanetExploreTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/ui/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/ui/Planet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/ui/PlanetPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/planet/strategies/MatchingFunctionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-camp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/planet/tests/PlanetExploreTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/planet/tests/PlanetExploreTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/planet/ui/PlanetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/planet/ui/PlanetPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/planet/tests/PlanetExploreTestSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/planet/tests/PlanetExploreTestSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/planet/ui/PlanetPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/planet/ui/PlanetPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,6 +297,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlanetExploreTestSuite.PlanetsPage_AssertEarthsRadius_Matching_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-camp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.planet.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.planet.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.planet.tests.PlanetExploreTestSuite" />
+      <option name="METHOD_NAME" value="PlanetsPage_AssertEarthsRadius_Matching_Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlanetExploreTestSuite.PlanetsPage_ExploreButton_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp" />
       <extension name="coverage">
@@ -339,7 +360,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlanetPageExploreTestSuite.Planets_ExploreButton_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlanetExploreTestSuite.isPlanetRadiusGreater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp" />
       <extension name="coverage">
         <pattern>
@@ -348,8 +369,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.planet.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.planet.tests.PlanetPageExploreTestSuite" />
-      <option name="METHOD_NAME" value="Planets_ExploreButton_Test" />
+      <option name="MAIN_CLASS_NAME" value="com.planet.tests.PlanetExploreTestSuite" />
+      <option name="METHOD_NAME" value="isPlanetRadiusGreater(com.planet.ui.Planet,com.planet.ui.Planet)" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -374,9 +395,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PlanetExploreTestSuite.PlanetsPage_ExploreButton_Test" />
+        <item itemvalue="JUnit.PlanetExploreTestSuite.isPlanetRadiusGreater" />
+        <item itemvalue="JUnit.PlanetExploreTestSuite.PlanetsPage_AssertEarthsRadius_Matching_Test" />
         <item itemvalue="JUnit.PlanetExploreTestSuite" />
         <item itemvalue="JUnit.PlanetExploreTestSuite.Planets_ExploreButton_Test" />
-        <item itemvalue="JUnit.PlanetPageExploreTestSuite.Planets_ExploreButton_Test" />
       </list>
     </recent_temporary>
   </component>

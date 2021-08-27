@@ -15,7 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.ParseException;
-import java.util.ArrayList;
+
+import static com.planet.strategies.MatchingFunctionExample.*;
 
 public class PlanetExploreTestSuite {
     WebDriver driver;
@@ -28,8 +29,13 @@ public class PlanetExploreTestSuite {
     }
 
     @Test
-    private boolean isPlanetRadiusGreater(Planet currentFurthest, Planet planet) throws ParseException {
+    private boolean isPlanetRadiusGreaterMatch(Planet currentFurthest, Planet planet) throws ParseException {
         return new MatchByRadiusGreater(getRadiusWithNullHandling(currentFurthest)).match(planet);
+    }
+
+    @Test
+    private boolean isPlanetRadiusGreater(Planet currentFurthest, Planet planet) throws ParseException {
+        return getPlanetGT4000(planet).equals(getRadiusWithNullHandling(currentFurthest));
     }
 
     private float getRadiusWithNullHandling(Planet currentPlanet) throws ParseException {
@@ -45,14 +51,21 @@ public class PlanetExploreTestSuite {
         //Act
         Planet currentPlanet = null;
         for (var planet : planetPage.getPlanets()) {
-            if (isPlanetRadiusGreater(currentPlanet , (Planet) planet)) {
-                currentPlanet = (Planet) planet;
+            if (isPlanetRadiusGreater(currentPlanet , planet)) {
+                currentPlanet = planet;
                 currentPlanet.clickExplore();
 
                 //Assert
-                Assertions.assertEquals("Exploring " + currentPlanet.getName(), driver.findElement(By.cssSelector("[class*='popup-message']")).getText());
+                var actual = driver.findElement(By.className("popup-message")).getText();
+                Assertions.assertEquals("Exploring " + currentPlanet.getName(), actual);
             }
         }
+    }
+
+    @Test
+    public void PlanetsPage_AssertEarthsRadius_Matching_Test () throws ParseException {
+        new HomePage(driver).clickPlanetButton();
+        Assertions.assertEquals(6371, new PlanetPage(driver).getPlanets(getPlanetByName("Earth")).getRadius());
     }
 
     @AfterEach
